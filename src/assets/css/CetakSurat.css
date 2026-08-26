@@ -1,0 +1,1251 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #e5e5e5;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.8px;
+}
+
+
+/* =========================================================
+   A4
+========================================================= */
+
+.print-page {
+  width: 210mm;
+  height: 297mm;
+
+  margin: 10mm auto;
+
+  padding: 7mm 8mm 7mm 8mm;
+
+  background: #fff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   KOP SURAT
+========================================================= */
+
+.kop {
+  width: 100%;
+  height: 28mm;
+
+  position: relative;
+
+  border-bottom: 2px solid #000;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+  position: absolute;
+
+  left: 3mm;
+  top: 0mm;
+
+  width: 29mm;
+  height: 29mm;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* =========================================================
+   TEKS KOP
+========================================================= */
+
+.kop-text {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  width: 100%;
+
+  text-align: center;
+
+  top: 3mm;
+
+  padding: 0;
+  margin: 0;
+}
+
+
+/* =========================================================
+   PEMERINTAH
+========================================================= */
+
+.pemerintah {
+  font-size: 15px;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   DINAS
+========================================================= */
+
+.dinas {
+  font-size: 16px;
+
+  font-weight: 700;
+
+  line-height: 1.08;
+
+  margin-top: 1px;
+
+  text-align: center;
+}
+
+.dinas * {
+  font-size: inherit;
+
+  font-weight: 700;
+
+  line-height: inherit;
+}
+
+
+/* =========================================================
+   ALAMAT
+========================================================= */
+
+.alamat {
+  font-size: 9.5px;
+
+  line-height: 1.2;
+
+  margin-top: 3px;
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.email {
+  font-size: 8.7px;
+
+  line-height: 1.15;
+
+  margin-top: 1px;
+}
+
+
+/* =========================================================
+   GARIS KOP
+========================================================= */
+
+.garis-kop,
+.garis-atas,
+.garis-bawah {
+  display: none;
+}
+
+
+/* =========================================================
+   JUDUL
+========================================================= */
+
+.judul {
+  width: 100%;
+
+  text-align: center;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  letter-spacing: 5px;
+
+  line-height: 1;
+
+  padding-top: 3mm;
+  padding-bottom: 3mm;
+
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+
+/* =========================================================
+   INFORMASI SURAT
+========================================================= */
+
+.info-box {
+  width: 100%;
+
+  border: 1px solid #000;
+
+  font-size: 10.8px;
+}
+
+
+/* =========================================================
+   BAGIAN ATAS INFORMASI
+========================================================= */
+
+.info-top {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 50% 50%;
+
+  min-height: 42mm;
+}
+
+
+.info-left {
+  border-right: 1px solid #000;
+
+  position: relative;
+
+  min-width: 0;
+}
+
+
+.info-right {
+  position: relative;
+
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BAGIAN KIRI
+   JARAK SURAT DARI, NO SURAT, TGL SURAT
+========================================================= */
+
+.surat-dari {
+  min-height: 17mm;
+
+  padding:
+    2.5mm
+    3mm
+    2.5mm
+    3mm;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 0;
+}
+
+
+.no-surat {
+  min-height: 17mm;
+
+  padding:
+    4mm
+    3mm
+    2.5mm
+    3mm;
+
+  display: flex;
+
+  align-items: flex-start;
+}
+
+
+.tgl-surat {
+  min-height: 14mm;
+
+  padding:
+    4mm
+    3mm
+    2mm
+    3mm;
+
+  display: flex;
+
+  align-items: flex-start;
+}
+
+
+/* =========================================================
+   LABEL INFORMASI
+========================================================= */
+
+.info-label {
+  display: inline-block;
+
+  width: 27mm;
+
+  flex-shrink: 0;
+
+  white-space: nowrap;
+
+  font-size: 10.8px;
+
+  font-weight: 400;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   TITIK DUA
+========================================================= */
+
+.info-colon {
+  display: inline-block;
+
+  width: 7mm;
+
+  flex-shrink: 0;
+
+  text-align: center;
+
+  font-size: 10.8px;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   NILAI INFORMASI
+========================================================= */
+
+.info-value {
+  flex: 1;
+
+  min-width: 0;
+
+  font-size: 10.8px;
+
+  line-height: 1.35;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   BAGIAN KANAN
+========================================================= */
+
+.info-row {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 27mm 7mm minmax(0, 1fr);
+
+  min-height: 9.5mm;
+
+  padding:
+    1.7mm
+    3mm
+    0
+    3mm;
+
+  align-items: start;
+
+  min-width: 0;
+}
+
+
+.info-row:first-child {
+  padding-top: 2.5mm;
+}
+
+
+/* =========================================================
+   DITERIMA
+========================================================= */
+
+.diterima-row {
+  min-height: 15mm;
+
+  align-items: start;
+}
+
+
+.diterima-value {
+  position: relative;
+
+  min-height: 15mm;
+
+  padding-right: 0;
+
+  padding-bottom: 0;
+
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   TANGGAL + TAHUN
+========================================================= */
+
+.tanggal-tahun {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 2mm;
+
+  white-space: nowrap;
+
+  line-height: 1.35;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   TANGGAL DITERIMA
+========================================================= */
+
+.tanggal-diterima {
+  display: inline-block;
+
+  white-space: nowrap;
+
+  font-size: 10.8px;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   TAHUN
+========================================================= */
+
+.tahun {
+  position: static;
+
+  display: inline-block;
+
+  font-size: 10.8px;
+
+  line-height: 1.35;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   JAM
+   JAM DI BAWAH TANGGAL + TAHUN
+========================================================= */
+
+.jam {
+  position: static;
+
+  display: block;
+
+  margin-top: 1mm;
+
+  font-size: 10.5px;
+
+  line-height: 1.35;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SIFAT
+========================================================= */
+
+.sifat-row {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 31mm minmax(0, 1fr);
+
+  padding:
+    0.8mm
+    2.5mm
+    2mm
+    3mm;
+
+  align-items: center;
+
+  min-height: 9mm;
+
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LABEL SIFAT
+========================================================= */
+
+.sifat-label {
+  display: flex;
+
+  align-items: center;
+
+  min-width: 0;
+
+  white-space: nowrap;
+}
+
+
+.sifat-label .info-colon {
+  display: none;
+}
+
+
+.sifat-label .info-label {
+  width: auto;
+
+  font-size: 10.8px;
+
+  line-height: 1.2;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   PILIHAN SIFAT
+========================================================= */
+
+.sifat {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 3mm;
+
+  white-space: nowrap;
+
+  margin: 0;
+
+  min-width: 0;
+
+  max-width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   ITEM SIFAT
+========================================================= */
+
+.sifat-item {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 1.2mm;
+
+  font-size: 9.2px;
+
+  line-height: 1.15;
+
+  flex-shrink: 1;
+
+  min-width: 0;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TEKS ITEM SIFAT
+========================================================= */
+
+.sifat-item > span:last-child {
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: clip;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   CHECKBOX
+========================================================= */
+
+.checkbox {
+  width: 5.5mm;
+
+  height: 5.2mm;
+
+  border: 1px solid #000;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  font-size: 10.5px;
+
+  line-height: 1;
+
+  color: #000;
+
+  vertical-align: middle;
+}
+
+
+/* =========================================================
+   CHECKBOX SIFAT
+========================================================= */
+
+.sifat .checkbox {
+  width: 5mm;
+
+  height: 5mm;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   HAL
+========================================================= */
+
+.hal-box {
+  width: 100%;
+
+  min-height: 22mm;
+
+  border-top: 1px solid #000;
+
+  display: block;
+
+  font-size: 10.8px;
+
+  line-height: 1.5;
+
+  padding:
+    2.5mm
+    3mm
+    5mm
+    3mm;
+}
+
+
+.hal-label {
+  display: inline;
+
+  padding: 0;
+
+  border: none;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+
+.hal-value {
+  display: inline;
+
+  padding: 0;
+
+  border: none;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   HEADER DISPOSISI
+========================================================= */
+
+.disposisi-head {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 50% 50%;
+
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+
+  font-size: 10.8px;
+
+  font-weight: 400;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   HEADER KIRI
+========================================================= */
+
+.disposisi-head-kiri {
+  padding:
+    2.5mm
+    3mm;
+
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+
+  text-align: left;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   HEADER KANAN
+========================================================= */
+
+.disposisi-head-kanan {
+  padding:
+    2.5mm
+    3mm;
+
+  border-bottom: 1px solid #000;
+
+  text-align: left;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   BODY DISPOSISI
+========================================================= */
+
+.disposisi-body {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 50% 50%;
+
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+
+  min-height: 64mm;
+
+  font-size: 10.2px;
+}
+
+
+/* =========================================================
+   KOLOM KIRI DISPOSISI
+========================================================= */
+
+.disposisi-kiri {
+  padding:
+    4mm
+    5mm
+    3mm
+    5mm;
+
+  border-right: 1px solid #000;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   KOLOM KANAN DISPOSISI
+========================================================= */
+
+.disposisi-kanan {
+  padding:
+    4mm
+    5mm
+    3mm
+    5mm;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   PILIHAN DISPOSISI
+========================================================= */
+
+.pilihan {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 6mm minmax(0, 1fr);
+
+  column-gap: 3mm;
+
+  align-items: start;
+
+  margin-bottom: 1.8mm;
+
+  line-height: 1.4;
+
+  min-width: 0;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   TEKS DISPOSISI
+========================================================= */
+
+.pilihan-text {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+
+  word-break: normal;
+
+  font-size: 10.8px;
+
+  line-height: 1.45;
+
+  text-align: left;
+
+  display: block;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   CHECKBOX DISPOSISI
+========================================================= */
+
+.pilihan .checkbox {
+  width: 6mm;
+
+  height: 5.5mm;
+
+  margin: 0;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BAGIAN BAWAH
+   CATATAN + TANDA TANGAN
+========================================================= */
+
+.bottom {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 50% 50%;
+
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+
+  min-height: 80mm;
+
+  font-size: 10.8px;
+}
+
+
+/* =========================================================
+   CATATAN
+========================================================= */
+
+.catatan {
+  border-right: 1px solid #000;
+
+  min-height: 80mm;
+
+  padding:
+    6mm
+    5mm
+    6mm
+    5mm;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   JUDUL CATATAN
+========================================================= */
+
+.catatan-title {
+  text-align: left;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 3mm;
+
+  width: fit-content;
+
+  padding-bottom: 1.5mm;
+
+  border-bottom: 1px solid #000;
+}
+
+
+/* =========================================================
+   ISI CATATAN
+========================================================= */
+
+.catatan-content {
+  margin-top: 0;
+
+  font-size: 10.8px;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+
+  display: block;
+
+  width: fit-content;
+
+  max-width: 100%;
+
+  text-align: left;
+
+  padding-bottom: 2mm;
+
+  border-bottom: 1px solid #000;
+}
+
+
+.catatan::after {
+  display: none;
+
+  content: none;
+}
+
+
+/* =========================================================
+   TANDA TANGAN
+========================================================= */
+
+.ttd {
+  min-height: 80mm;
+
+  padding:
+    5mm
+    6mm;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   KOTA + TAHUN
+========================================================= */
+
+.ttd-kota {
+  font-size: 12.5px;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  margin-bottom: 5mm;
+}
+
+
+.ttd-tahun {
+  margin-left: 28mm;
+
+  font-size: 12.5px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   JABATAN
+========================================================= */
+
+.ttd-jabatan {
+  font-size: 12.5px;
+
+  font-weight: 700;
+
+  margin-bottom: 1mm;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   RUANG TANDA TANGAN
+========================================================= */
+
+.ruang-ttd {
+  height: 27mm;
+}
+
+
+/* =========================================================
+   NAMA KEPALA DINAS
+========================================================= */
+
+.nama-kepala {
+  font-size: 12.5px;
+
+  font-weight: 700;
+
+  text-decoration: underline;
+
+  margin-top: 1mm;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NIP
+========================================================= */
+
+.nip {
+  font-size: 12.5px;
+
+  font-weight: 700;
+
+  margin-top: 1mm;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TOMBOL PRINT
+========================================================= */
+
+.print-button {
+  position: fixed;
+
+  top: 15px;
+
+  right: 15px;
+
+  padding: 10px 17px;
+
+  background: #123b5d;
+
+  color: #fff;
+
+  border: none;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  z-index: 9999;
+}
+
+
+.print-button:hover {
+  background: #0d2e48;
+}
+
+
+/* =========================================================
+   TOMBOL KEMBALI
+========================================================= */
+
+.back-button {
+  position: fixed;
+
+  top: 15px;
+
+  left: 15px;
+
+  padding: 10px 17px;
+
+  background: #fff;
+
+  color: #123b5d;
+
+  border: 1px solid #123b5d;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  z-index: 9999;
+}
+
+
+/* =========================================================
+   NOT FOUND
+========================================================= */
+
+.not-found {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.not-found a {
+  color: #123b5d;
+
+  text-decoration: none;
+
+  margin-top: 10px;
+}
+
+
+/* =========================================================
+   SCREEN
+========================================================= */
+
+@media screen and (max-width: 900px) {
+
+  body {
+    overflow-x: auto;
+  }
+
+  .print-page {
+    flex-shrink: 0;
+  }
+}
+
+
+/* =========================================================
+   PRINT A4
+========================================================= */
+
+@page {
+  size: A4 portrait;
+
+  margin: 0;
+}
+
+
+@media print {
+
+  html,
+  body {
+    width: 210mm;
+
+    height: 297mm;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: #fff;
+  }
+
+
+  .print-page {
+    width: 210mm;
+
+    height: 297mm;
+
+    margin: 0;
+
+    padding:
+      7mm
+      8mm
+      7mm
+      8mm;
+
+    overflow: hidden;
+  }
+
+
+  .print-button,
+  .back-button {
+    display: none !important;
+  }
+
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+
+    print-color-adjust: exact !important;
+  }
+}

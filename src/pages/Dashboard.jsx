@@ -20,7 +20,7 @@ function Dashboard() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:5000/api/surat"
+        "https://disposisi-projek.vercel.app/api/surat"
       );
 
       const result = await response.json();

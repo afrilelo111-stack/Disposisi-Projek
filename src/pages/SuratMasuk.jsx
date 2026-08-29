@@ -19,7 +19,7 @@ function SuratMasuk() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:5000/api/surat"
+        "https://disposisi-projek.vercel.app/api/surat"
       );
 
       const result = await response.json();
@@ -137,7 +137,7 @@ function SuratMasuk() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/surat/${id}`,
+        `https://disposisi-projek.vercel.app/api/surat/${id}`,
         {
           method: "DELETE",
         }

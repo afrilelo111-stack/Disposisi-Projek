@@ -225,7 +225,7 @@ export default function CetakSurat() {
         setError("");
 
         const response = await fetch(
-          `http://localhost:5000/api/surat/${id}`
+          `https://disposisi-projek.vercel.app/api/surat/${id}`
         );
 
         const result = await response.json();

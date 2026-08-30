@@ -28,14 +28,19 @@ function TambahSurat() {
       const sekarang = new Date();
 
       const formatterTanggal = new Intl.DateTimeFormat(
-        "en-CA",
+        "en-GB",
         {
           timeZone: "Asia/Makassar",
-          year: "numeric",
-          month: "2-digit",
           day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
         }
       );
+
+      const tanggalIndonesia =
+        formatterTanggal
+          .format(sekarang)
+          .replace(/\//g, "-");
 
       const formatterJam = new Intl.DateTimeFormat(
         "en-GB",
@@ -47,9 +52,6 @@ function TambahSurat() {
           hour12: false,
         }
       );
-
-      const tanggalIndonesia =
-        formatterTanggal.format(sekarang);
 
       const jamIndonesia =
         formatterJam
@@ -85,6 +87,37 @@ function TambahSurat() {
     setFormData((prev) => ({
       ...prev,
       [name]: value,
+    }));
+  };
+
+  // =========================================================
+  // HANDLE TANGGAL SURAT
+  // =========================================================
+
+  const handleTanggalSuratChange = (e) => {
+    let value = e.target.value.replace(/\D/g, "");
+
+    if (value.length > 8) {
+      value = value.slice(0, 8);
+    }
+
+    if (value.length > 2) {
+      value =
+        value.slice(0, 2) +
+        "-" +
+        value.slice(2);
+    }
+
+    if (value.length > 5) {
+      value =
+        value.slice(0, 5) +
+        "-" +
+        value.slice(5);
+    }
+
+    setFormData((prev) => ({
+      ...prev,
+      tanggal_surat: value,
     }));
   };
 
@@ -401,7 +434,7 @@ function TambahSurat() {
                 </label>
 
                 <input
-                  type="date"
+                  type="text"
                   name="tanggal_diterima"
                   value={formData.tanggal_diterima}
                   readOnly
@@ -473,8 +506,10 @@ function TambahSurat() {
                   type="text"
                   name="tanggal_surat"
                   value={formData.tanggal_surat}
-                  onChange={handleChange}
+                  onChange={handleTanggalSuratChange}
                   placeholder="Contoh: 28-08-2026"
+                  maxLength={10}
+                  inputMode="numeric"
                   autoComplete="off"
                 />
 
